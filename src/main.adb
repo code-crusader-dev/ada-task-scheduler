@@ -2,9 +2,9 @@ with Scheduler;
 with Ada.Text_IO; use Ada.Text_IO;
 
 procedure Main is
-   Task1 : Scheduler.Worker(1);
-   Task2 : Scheduler.Worker(2);
-   Task3 : Scheduler.Worker(3);
+   T1 : Scheduler.Worker (1, 1); -- High priority
+   T2 : Scheduler.Worker (2, 5);
+   T3 : Scheduler.Worker (3, 9); -- Low priority
 begin
-   Put_Line ("Starting Ada Task Scheduler...");
+   Put_Line ("Starting real scheduler...");
 end Main;
